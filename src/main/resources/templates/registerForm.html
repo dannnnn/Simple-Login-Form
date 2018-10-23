@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html" lang ="en">
+<head>
+    <title>Registration</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+
+<body>
+<div id="content">
+    <h1>Register</h1>
+
+    <form method="POST" th:object="${user}" th:action="@{/user/register}">
+
+        <div th:if="${param.error}" class = "alert alert-danger">
+            This username is already taken.
+        </div>
+        <br>
+
+        <table>
+            <tr>
+                <td>Username:</td>
+                <td><input type="text" th:field="*{username}"/> </td>
+                 <td th:if="${#fields.hasErrors('username')}" th:errors="*{username}">Username Error</td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" th:field="*{password}"/> </td>
+                <td th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Password Error</td>
+            </tr>
+            <tr>
+                <td>First Name:</td>
+                <td><input type="text" th:field="*{first_name}"/> </td>
+                <td th:if="${#fields.hasErrors('first_name')}" th:errors="*{first_name}">First Name Error</td>
+            </tr>
+            <tr>
+                <td>Last Name:</td>
+                <td><input type="text" th:field="*{last_name}"/> </td>
+                <td th:if="${#fields.hasErrors('last_name')}" th:errors="*{last_name}">Last Name Error</td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Register" /></td>
+            </tr>
+            <tr>
+                <td><a href="/" th:href="@{/}" class="btn btn-large btn-success">Back</a></td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>

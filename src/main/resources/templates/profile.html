@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html   xmlns:th="http://www.thymeleaf.org" lang = "en">
+<head>
+    <title>User</title>
+    <link rel="stylesheet"
+          type="text/css"
+          th:href="@{/resources/style.css}"></link>
+</head>
+<body>
+<div id="content">
+    <h1>Your Profile</h1>
+    <span th:text="${user.username}">username</span><br/>
+    <span th:text="${user.first_name}">First</span> <span th:text="${user.last_name}">Last</span><br/>
+    <div>
+        <form action="#" th:action="@{/logout}" method="post">
+            <input type="submit" value="Logout" />
+        </form>
+    </div>
+    <!--<a th:href="@{/logout}">Logout</a>-->
+</div>
+
+</body>
+</html>
