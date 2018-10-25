@@ -8,7 +8,7 @@ Then you have to open cmd, and login as postgres superuser, by deafult its postg
 
 psql -U postgress postgress and enter your password.
 
-When postgres=# appreads you should type 
+When postgres=# appears you should type 
 
 create database app_data;
 
