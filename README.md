@@ -5,6 +5,7 @@ To setup the database you first need to install a Postgresql server link.
 After you've installed it add the bin folder to your Path system variable.
 
 Then you have to open cmd, and login as postgres superuser, by deafult its postgres:
+
 psql -U postgress postgress and enter your password.
 
 When postgres=# appreads you should type 
