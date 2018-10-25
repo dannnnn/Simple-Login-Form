@@ -1,7 +1,7 @@
 # Simple-Login-Form
 Simple web-application using using Spring/Spring-Boot
 
-To setup the database you first need to install a Postgresql server link. 
+To setup the database you first need to install a Postgresql server. 
 After you've installed it add the bin folder to your Path system variable.
 
 Then you have to open cmd, and login as postgres superuser, by deafult its postgres:
